@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧪 Front-End Technical Assignment – Telekom App
 
-## Getting Started
+Welcome! 👋  
+This is a **technical assignment** for front-end developer applicants. Your task is to build a small but production-ready web application based on the requirements below. This will help us understand how you approach structure, design, quality, and performance.
 
-First, run the development server:
+---
+
+## 📌 Objective
+
+Build a responsive, modern **e-commerce product catalog** using data from the [FakeStore API](https://fakestoreapi.com/docs). The app should allow users to:
+
+- Browse products in a **grid layout**
+- View **product details**
+- **Filter products** by price range
+- See a responsive design that works on all screen sizes
+
+---
+
+## 🧰 Requirements
+
+### ✅ Tech Stack
+
+You **must** use the following:
+
+- **Next.js** (Latest version)
+- **React v18/v19**
+- **TypeScript** (Strict mode)
+- **Tailwind CSS** for styling
+- **shadcn/ui** for reusable components (optional, but encouraged)
+- **pnpm** as the package manager
+- **FakeStore API** as backend data source
+- **Docker** for containerization
+- **Vitest** for unit testing
+- **Playwright** for some e2e tests, this is not required but nice to have
+
+---
+
+### 🔧 Development Requirements
+
+We are looking for **production-grade quality**, which means:
+
+- Set up a proper **project structure**
+- Configure **ESLint**, **Prettier**, and **tsconfig** for code quality
+- Use **OpenAPI client generation** to communicate with the API (you can use your preferred tool like `openapi-typescript`, `orval`, etc.)
+- Here is link to download your [openapi.json](https://fakestoreapi.com/fakestoreapi.json) file
+- Add **basic unit tests** using **Vitest**
+- Include a **Dockerfile** to build and run the application locally
+- Implement **Next.js caching mechanisms** where applicable
+
+---
+
+### 🎯 Functional Requirements
+
+Your app should have the following pages/features:
+
+1. **Product Listing Page**
+   - Grid layout (responsive)
+   - Uses API client to fetch and display products
+2. **Product Detail Page**
+   - Displays information for a selected product
+3. **Price Filtering**
+   - Filter products based on a min–max price range
+4. **Responsive Design**
+   - Must look good on both mobile and desktop
+5. **Caching**
+   - Use caching strategies available in Next.js (e.g., static generation, revalidation)
+
+---
+
+## 🧪 Testing
+
+- Write at least a few **unit tests** with **Vitest**
+- **Bonus points** for testing filtering logic, edge cases and some e2e tests in **playwright**
+
+---
+
+## 🐳 Docker
+
+Include a **Dockerfile** that allows the app to be built and run locally. For example:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+docker build -t telekom-app .
+docker run -p 3000:3000 telekom-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📬 Questions?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If you got any questions, please contact us at:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📧 tomas1.majer@telekom.sk
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Good luck and we look forward to reviewing your work! 🚀
